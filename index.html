@@ -14,8 +14,10 @@
 			href="https://fonts.googleapis.com/css?family=Roboto"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="normalize.css" />
-		<link rel="stylesheet" href="stile.css" />
+		<link rel="stylesheet" href="styles/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="styles/normalize.css" />
+		<link rel="stylesheet" href="styles/stile.css" />
+		<script src="scripts/swiper-bundle.min.js"></script>
 	</head>
 	<body>
 		<header class="site-header">
@@ -29,37 +31,48 @@
 							<li><a href="#work">work</a></li>
 							<li><a href="#blog">blog</a></li>
 							<li><a href="#contacts">contact</a></li>
-							<li>
+							<!-- <li>
 								<a href="#"><img src="./img/cart_icon.png" alt="cart" /></a>
 							</li>
 							<li>
 								<a href="#"><img src="./img/search_icon.png" alt="search" /></a>
-							</li>
+							</li> -->
 						</ul>
 					</nav>
 				</div>
 			</div>
-			<div class="site-hero">
-				<div class="intro">
-					<h1>Creative Tamplate</h1>
-					<h2>welcome to mogo</h2>
-					<img src="./img/intro_line.png" alt="line" />
-					<a class="intro-btn">learn more</a>
+			<div class="site-hero swiper-container hero-slider">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="intro">
+							<h2 class="intro__title">Creative Tamplate</h2>
+							<h3 class="intro__subtitle">welcome to mogo</h3>
+							<a class="intro__btn">learn more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="intro">
+							<h2 class="intro__title">Work</h2>
+							<h3 class="intro__subtitle">welcome to mogo</h3>
+							<a class="intro__btn">learn more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="intro">
+							<h2 class="intro__title">About</h2>
+							<h3 class="intro__subtitle">welcome to mogo</h3>
+							<a class="intro__btn">learn more</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="intro">
+							<h2 class="intro__title">Contacts</h2>
+							<h3 class="intro__subtitle">welcome to mogo</h3>
+							<a class="intro__btn">learn more</a>
+						</div>
+					</div>
 				</div>
-				<ul class="site-container slider-nav">
-					<li>
-						<a href=""><strong>01</strong>intro</a>
-					</li>
-					<li>
-						<a href=""><strong>02</strong>work</a>
-					</li>
-					<li>
-						<a href=""><strong>03</strong>about</a>
-					</li>
-					<li>
-						<a href=""><strong>04</strong>contacts</a>
-					</li>
-				</ul>
+				<ul class="swiper-pagination site-container slider-pagination"></ul>
 			</div>
 		</header>
 		<section id="about" class="site-container section about">
@@ -696,5 +709,35 @@
 				</p>
 			</div>
 		</footer>
+
+		<script>
+			const introSlider = new Swiper('.hero-slider', {
+				loop: true,
+				autoplayDisableOnInteraction: false,
+				slidesPerView: 1,
+				autoplay: {
+					delay: 3000,
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: 'true',
+					type: 'bullets',
+					renderBullet: function (index, className) {
+						const sliderItemNames = ['intro', 'work', 'about', 'contacts'];
+						return `
+              <li class="${className}">
+                <div class="slider-pagination__progress">
+                  <div class="slider-pagination__progress-bar"></div>
+                </div>
+                <div class="slider-pagination__content">
+                  <strong>0${index + 1}</strong>
+                  <span>${sliderItemNames[index]}</span>
+                </div>
+              </li>
+            `;
+					},
+				},
+			});
+		</script>
 	</body>
 </html>
