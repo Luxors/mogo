@@ -24,11 +24,11 @@
 					<div class="site-logo">MoGo</div>
 					<nav class="site-nav">
 						<ul class="site-nav__list">
-							<li><a class="active" href="#">about</a></li>
-							<li><a href="#">service</a></li>
-							<li><a href="#">work</a></li>
-							<li><a href="#">blog</a></li>
-							<li><a href="#">contact</a></li>
+							<li><a class="active" href="#about">about</a></li>
+							<li><a href="#service">service</a></li>
+							<li><a href="#work">work</a></li>
+							<li><a href="#blog">blog</a></li>
+							<li><a href="#contacts">contact</a></li>
 							<li>
 								<a href="#"><img src="./img/cart_icon.png" alt="cart" /></a>
 							</li>
@@ -62,7 +62,7 @@
 				</ul>
 			</div>
 		</header>
-		<section class="site-container section aboutUs">
+		<section id="about" class="site-container section about">
 			<header class="section-header">
 				<h3>What we do</h3>
 				<h4>story about us</h4>
@@ -74,8 +74,8 @@
 					aliquip ex ea commodo consequat.
 				</p>
 			</header>
-			<div class="aboutUs-block">
-				<ul class="aboutUs-block__inner">
+			<div class="about-block">
+				<ul class="about-block__inner">
 					<li><img src="./img/about-us-1.jpg" alt="img" /></li>
 					<li><img src="./img/about-us-2.jpg" alt="img" /></li>
 					<li><img src="./img/about-us-3.jpg" alt="img" /></li>
@@ -108,7 +108,7 @@
 			</div>
 		</div>
 
-		<section class="site-container section service">
+		<section id="service" class="site-container section service">
 			<header class="section-header">
 				<h3>We work with</h3>
 				<h4>amazing services</h4>
@@ -191,7 +191,7 @@
 			</div>
 		</section>
 
-		<seсtion class="section feature">
+		<section class="section feature">
 			<div class="site-container">
 				<header class="section-header">
 					<h3>For all devices</h3>
@@ -211,7 +211,7 @@
 					/>
 				</figure>
 			</div>
-		</seсtion>
+		</section>
 
 		<section class="site-container section directions">
 			<header class="section-header">
@@ -337,7 +337,7 @@
 			</div>
 		</div>
 
-		<section class="section work">
+		<section id="work" class="section work">
 			<div class="site-container">
 				<header class="section-header">
 					<h3>What we do</h3>
@@ -474,7 +474,7 @@
 			</div>
 		</section>
 
-		<section class="site-container blog">
+		<section id="blog" class="site-container section blog">
 			<header class="section-header">
 				<h3>Our stories</h3>
 				<h4>Latest blog</h4>
@@ -482,77 +482,86 @@
 			</header>
 
 			<div class="blog-inner">
-				<div class="blog-item inline">
-					<div class="blog-img">
+				<article class="blog-item">
+					<figure class="blog-item__img">
 						<img class="" src="./img/blog-1.jpg" alt="img" />
-						<img class="blog-img__pic" src="./img/blog-date_1.png" alt="img" />
-					</div>
+						<div class="blog-item__date">
+							<span class="blog-item__date__day">15</span>
+							<span class="blog-item__date__month">jan</span>
+						</div>
+					</figure>
 					<h5 class="blog-item__title">Lorem ipsum dolor sit amet</h5>
 					<p class="blog-item__text">
 						Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
 						labore et dolore magna aliqua.
 					</p>
-					<div class="blog-item__userActivity">
-						<div class="blog-body__userActivity-view inline">
+					<div class="blog-item__activity">
+						<div class="blog-body__activity-view inline">
 							<img class="inline" src="./img/blog-view.png" alt="img" />
 							<p class="inline">542</p>
 						</div>
-						<div class="blog-body_userActivity-speech inline">
+						<div class="blog-body_activity-speech inline">
 							<img class="inline" src="./img/blog-speech.png" alt="img" />
 							<p class="inline">17</p>
 						</div>
 					</div>
-				</div>
-				<div class="blog-item inline">
-					<div class="blog-img">
+				</article>
+				<article class="blog-item">
+					<figure class="blog-item__img">
 						<img class="" src="./img/blog-2.jpg" alt="img" />
-						<img class="blog-img__pic" src="./img/blog-date_2.png" alt="img" />
-					</div>
+						<div class="blog-item__date">
+							<span class="blog-item__date__day">14</span>
+							<span class="blog-item__date__month">jan</span>
+						</div>
+					</figure>
 					<h5 class="blog-item__title">sed do eiusmod tempor</h5>
 					<p class="blog-item__text">
 						Adipiscing elit, sed do eiusmod tempor incididunt ut labore et
 						dolore magna aliqua
 					</p>
-					<div class="blog-item__userActivity">
-						<div class="blog-body_userActivity-view inline">
+					<div class="blog-item__activity">
+						<div class="blog-body_activity-view inline">
 							<img class="inline" src="./img/blog-view.png" alt="img" />
 							<p class="inline">992</p>
 						</div>
-						<div class="blog-body__userActivity-speech inline">
+						<div class="blog-body__activity-speech inline">
 							<img class="inline" src="./img/blog-speech.png" alt="img" />
 							<p class="inline">42</p>
 						</div>
 					</div>
-				</div>
-				<div class="blog-item inline">
-					<div class="blog-img">
+				</article>
+				<article class="blog-item">
+					<figure class="blog-item__img">
 						<img class="" src="./img/blog-3.jpg" alt="img" />
-						<img class="blog-img__pic" src="./img/blog-date_3.png" alt="img" />
-					</div>
+						<div class="blog-item__date">
+							<span class="blog-item__date__day">7</span>
+							<span class="blog-item__date__month">jan</span>
+						</div>
+					</figure>
 					<h5 class="blog-item__title">incididunt ut labore et dolore</h5>
 					<p class="blog-item__text">
 						Elit, sed do eiusmod tempor incididunt ut labore et dolore magna
 						aliqua
 					</p>
-					<div class="blog-item__userActivity">
-						<div class="blog-body__userActivity-view inline">
+					<div class="blog-item__activity">
+						<div class="blog-body__activity-view inline">
 							<img class="inline" src="./img/blog-view.png" alt="img" />
 							<p class="inline">1560</p>
 						</div>
-						<div class="blog-body_userActivity-speech inline">
+						<div class="blog-body_activity-speech inline">
 							<img class="inline" src="./img/blog-speech.png" alt="img" />
 							<p class="inline">98</p>
 						</div>
 					</div>
-				</div>
+				</article>
 			</div>
 		</section>
 
-		<div class="map">
-			<div class="site-container map-inner">
-				<img class="map-ico inline" src="./img/map_ico.png" alt="img" />
-				<a class="block" href="#">open map</a>
-				<img class="map-line inline" src="./img/map_line.png" alt="img" />
+		<div id="contacts" class="contacts">
+			<div class="site-container contacts-inner">
+				<img class="contacts-ico inline" src="./img/map_ico.png" alt="img" />
+				<a class="block" href="#">open contacts</a>
+				<img class="contacts-line inline" src="./img/map_line.png" alt="img" />
 			</div>
 		</div>
 
@@ -675,7 +684,16 @@
 				</div>
 			</div>
 			<div class="copy">
-				<p>© 2016 MoGo free PSD template by <a href="#">Laaqiq</a></p>
+				<p>
+					© 2016 MoGo free PSD template by
+					<a
+						href="https://www.behance.net/laaqiq"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Laaqiq
+					</a>
+				</p>
 			</div>
 		</footer>
 	</body>

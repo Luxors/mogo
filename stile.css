@@ -1,10 +1,13 @@
 * {
 	box-sizing: border-box;
 }
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	box-sizing: border-box;
 	width: 100%;
-	/* width: 1920px; */
 	font-family: Montserrat, sans-serif;
 	font-size: 16px;
 	overflow-x: hidden;
@@ -233,24 +236,24 @@ li {
 	font-size: 15px;
 }
 
-.aboutUs {
+.about {
 	padding-top: 100px;
 }
 
-.aboutUs-block {
+.about-block {
 	margin-bottom: 110px;
 }
 
-.aboutUs-block__inner {
+.about-block__inner {
 	padding: 0;
 }
 
-.aboutUs-block__inner li {
+.about-block__inner li {
 	display: inline-block;
 	padding-right: 21px;
 }
 
-.aboutUs-block__inner li:last-child {
+.about-block__inner li:last-child {
 	padding-right: 0;
 }
 
@@ -574,21 +577,20 @@ li {
 
 .testimonials {
 	padding: 100px 0;
-	background: url(./img/peopleSay_bg.jpg) no-repeat top left;
+	background: url(./img/peopleSay_bg.jpg) no-repeat center / cover;
 }
 
 .testimonials-inner {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
-	gap: 50px;
+	gap: 70px;
 }
 
 .testimonials-item {
 	display: flex;
 	position: relative;
 	gap: 40px;
-	padding: 0 40px 70px 40px;
 }
 .testimonials-img {
 	flex-shrink: 0;
@@ -631,28 +633,47 @@ li {
 }
 
 .blog {
-	margin-bottom: 110px;
+	/* margin-bottom: 110px; */
 }
 .blog-inner {
-	box-sizing: border-box;
-	margin-top: 45px;
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 30px;
 }
 .blog-item {
-	width: 375px;
-	margin-right: 30px;
+	flex: 1;
 }
-.blog-item:last-child {
-	margin-right: 0;
-}
-.blog-img {
+
+.blog-item__img {
 	position: relative;
 	margin-bottom: 20px;
 }
-.blog-img__pic {
+
+.blog-item__date {
 	position: absolute;
 	top: 160px;
 	left: -10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 70px;
+	color: #fff;
+	background-color: rgb(149, 225, 211);
 }
+
+.blog-item__date__day {
+	font-size: 30px;
+	font-weight: 900;
+}
+
+.blog-item__date__month {
+	font-size: 12px;
+	text-transform: capitalize;
+	font-style: italic;
+}
+
 .blog-item__title {
 	margin-bottom: 20px;
 	color: #333;
@@ -669,21 +690,21 @@ li {
 	line-height: 1.6;
 	text-align: left;
 }
-.blog-item__userActivity img {
+.blog-item__activity img {
 	margin-right: 7px;
 }
-.blog-item__userActivity p {
+.blog-item__activity p {
 	margin-right: 19px;
 }
 
-.map {
+.contacts {
 	background: url(./img/map_bg.jpg) no-repeat top left;
 }
-.map-inner {
+.contacts-inner {
 	padding: 47px 0;
 	text-align: center;
 }
-.map-inner a {
+.contacts-inner a {
 	text-decoration: none;
 	font-size: 24px;
 	font-family: 'Montserrat';
@@ -691,10 +712,10 @@ li {
 	font-weight: bold;
 	text-transform: uppercase;
 }
-.map-ico {
+.contacts-ico {
 	margin-bottom: 20px;
 }
-.map-line {
+.contacts-line {
 	margin-top: 20px;
 }
 
