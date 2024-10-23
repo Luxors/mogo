@@ -339,7 +339,7 @@ li {
 	transition: opacity 0.6s ease;
 }
 
-.about-item__cuption {
+.about-item__caption {
 	font-size: 18px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -637,6 +637,26 @@ li {
 
 .work-item--third {
 	grid-row: span 2;
+}
+
+.work-item__heading {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	padding: 20px;
+}
+
+.work-item__caption {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.work-item__description {
+	font-size: 15px;
+	font-family: 'Roboto';
+	font-style: italic;
+	line-height: 1.6;
 }
 
 .tetimonial {
