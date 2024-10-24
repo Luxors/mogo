@@ -14,10 +14,9 @@
 			href="https://fonts.googleapis.com/css?family=Roboto"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="styles/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="styles/normalize.css" />
+		<link rel="stylesheet" href="styles/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="styles/stile.css" />
-		<script src="scripts/swiper-bundle.min.js"></script>
 	</head>
 	<body>
 		<header class="site-header">
@@ -280,8 +279,8 @@
 					<img src="./img/service2_img.jpg" alt="img" />
 				</div>
 				<div class="directions-accordeon">
-					<div class="directions-content">
-						<div class="directions-content__title">
+					<div class="directions-item">
+						<div class="directions-item__title">
 							<img src="./img/serv2-1.png" alt="img" />
 							<span>photography</span>
 							<img src="./img/arrow_up.png" alt="img" />
@@ -299,15 +298,15 @@
 							officia deserunt mollit anim id est laborum.
 						</p>
 					</div>
-					<div class="directions-content">
-						<div class="directions-content__title">
+					<div class="directions-item">
+						<div class="directions-item__title">
 							<img src="./img/serv2-2.png" alt="img" />
 							<span>creativity</span>
 							<img src="./img/arrow_down.png" alt="img" />
 						</div>
 					</div>
-					<div class="directions-content">
-						<div class="directions-content__title">
+					<div class="directions-item">
+						<div class="directions-item__title">
 							<img src="./img/serv2-3.png" alt="img" />
 							<span>web design</span>
 							<img src="./img/arrow_down.png" alt="img" />
@@ -985,48 +984,6 @@
 			</div>
 		</footer>
 
-		<script>
-			const introSlider = new Swiper('.hero-slider', {
-				loop: true,
-				autoplayDisableOnInteraction: false,
-				slidesPerView: 1,
-				autoplay: {
-					delay: 3000,
-				},
-				pagination: {
-					el: '.swiper-pagination',
-					clickable: 'true',
-					type: 'bullets',
-					renderBullet: function (index, className) {
-						const sliderItemNames = ['intro', 'work', 'about', 'contacts'];
-						return `
-              <li class="${className}">
-                <div class="slider-pagination__progress">
-                  <div class="slider-pagination__progress-bar"></div>
-                </div>
-                <div class="slider-pagination__content">
-                  <strong>0${index + 1}</strong>
-                  <span>${sliderItemNames[index]}</span>
-                </div>
-              </li>
-            `;
-					},
-				},
-			});
-
-			const quoteSliderFirst = new Swiper('.quote-swiper-first', {
-				navigation: {
-					nextEl: '.quote-swiper-first-button--next',
-					prevEl: '.quote-swiper-first-button--prev',
-				},
-			});
-
-			const quoteSliderSecond = new Swiper('.quote-swiper-second', {
-				navigation: {
-					nextEl: '.quote-swiper-second-button--next',
-					prevEl: '.quote-swiper-second-button--prev',
-				},
-			});
-		</script>
+    <script type="module" src="scripts/common.js"></script>
 	</body>
 </html>
