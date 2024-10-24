@@ -447,7 +447,7 @@ li {
 }
 
 .directions-inner__img,
-.directions-accordeon {
+.directions-accordion {
 	flex: 1;
 }
 
@@ -457,13 +457,17 @@ li {
 	object-fit: cover;
 }
 
-.directions-accordeon {
+.directions-accordion {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 }
 
-.directions-item__title {
+.directions-item {
+	border: 1px solid #ccc;
+}
+
+.directions-item__header {
 	display: flex;
 	align-items: center;
 	gap: 15px;
@@ -472,28 +476,44 @@ li {
 	font-size: 14px;
 	list-style: none;
 	cursor: pointer;
-	border: 1px solid #ccc;
 }
 
-.directions-item__title img:first-child {
+.directions-item__header img {
 	flex-shrink: 0;
 }
 
-.directions-item span {
+.directions-item__header h5 {
 	flex: 1;
 }
 
-.directions-item__title img:last-child {
+.directions-item__chevron {
 	flex-shrink: 0;
 	margin-left: auto;
+	transition: transform 0.3s ease;
 }
 
-.directions-item p {
-	padding: 19px;
-	border: 1px solid #ccc;
-	border-top: none;
-	max-height: 190px;
+.directions-item__content {
+	max-height: 0;
 	overflow: auto;
+	transition: max-height 0.3s ease;
+}
+
+.directions-item__content p {
+	padding: 20px;
+}
+
+.directions-item--active .directions-item__header {
+	border-bottom: 1px solid #ccc;
+	cursor: default;
+}
+
+.directions-item--active .directions-item__chevron {
+	transform: rotate(-180deg);
+}
+
+.directions-item--active .directions-item__content {
+	height: 180px;
+	max-height: 180px;
 }
 
 .quote {
