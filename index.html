@@ -897,7 +897,7 @@
 			<div class="site-container">
         <div class="contacts-inner">
           <img src="./img/map_ico.png" alt="" />
-          <button type="button" class="contacts-control" >open contacts</button>
+          <button type="button" id="showContactsModalBtn" class="show-modal-btn">open contacts</button>
         </div>
 			</div>
 		</div>
@@ -1033,6 +1033,19 @@
 			</div>
 		</footer>
 
+    <div id="contactsModal" class="contacts-modal">
+      <div class="contacts-modal__wrapper">
+        <header class="contacts-modal__header">
+          <h2>Наш адрес</h2>
+          <span id="closeContactsModalBtn" class="close-modal-btn">&times;</span>
+        </header>
+        <div class="contacts-modal__content">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script type="module" src="scripts/common.js"></script>
 	</body>
 </html>
