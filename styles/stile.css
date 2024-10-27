@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('normalize.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css');
+@import url('swiper-bundle.min.css');
 
 * {
 	box-sizing: border-box;
